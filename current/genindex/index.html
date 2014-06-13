@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Index &mdash; emcee 2.0.0 documentation</title>
+    <title>Index &mdash; emcee 2.1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/flasky.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0.0',
+        VERSION:     '2.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '',
         HAS_SOURCE:  true
@@ -25,15 +25,12 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="emcee 2.0.0 documentation" href="../" />
+    <link rel="top" title="emcee 2.1.0 documentation" href="../" />
      
     
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
-    <script type="text/javascript" src="//use.typekit.com/phg8fgl.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <link href="http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700|Alegreya+SC:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700|Alegreya+SC:400,700|Buenard:400,700" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="../_static/favicon.png">
 
 
@@ -48,7 +45,7 @@
         <li class="right" >
           <a href="../py-modindex/" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="../">emcee 2.0.0 documentation</a> &raquo;</li> 
+        <li><a href="../">emcee 2.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -64,7 +61,6 @@
  <a href="#A"><strong>A</strong></a>
  | <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
- | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
@@ -114,10 +110,6 @@
   <dt><a href="../api/#emcee.PTSampler.acor">(emcee.PTSampler attribute)</a>
   </dt>
 
-        
-  <dt><a href="../api/#emcee.Sampler.acor">(emcee.Sampler attribute)</a>
-  </dt>
-
       </dl></dd>
   </dl></td>
 </tr></table>
@@ -125,6 +117,10 @@
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../api/#emcee.utils.MPIPool.bcast">bcast() (emcee.utils.MPIPool method)</a>
+  </dt>
+
       
   <dt><a href="../api/#emcee.PTSampler.betas">betas (emcee.PTSampler attribute)</a>
   </dt>
@@ -160,6 +156,12 @@
 
       </dl></dd>
       
+  <dt><a href="../api/#emcee.EnsembleSampler.clear_blobs">clear_blobs() (emcee.EnsembleSampler method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
   <dt><a href="../api/#emcee.EnsembleSampler.clear_chain">clear_chain() (emcee.EnsembleSampler method)</a>
   </dt>
 
@@ -177,20 +179,8 @@
   </dt>
 
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="../api/#emcee.utils.MPIPool.close">close() (emcee.utils.MPIPool method)</a>
-  </dt>
-
-  </dl></td>
-</tr></table>
-
-<h2 id="D">D</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="../api/#emcee.PTSampler.default_beta_ladder">default_beta_ladder() (emcee.PTSampler method)</a>
   </dt>
 
   </dl></td>
@@ -200,7 +190,11 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="../user/advanced/#module-emcee">emcee (module)</a>, <a href="../user/quickstart/#module-emcee">[1]</a>, <a href="../api/#module-emcee">[2]</a>, <a href="../user/pt/#module-emcee">[3]</a>
+  <dt><a href="../user/quickstart/#module-emcee">emcee (module)</a>, <a href="../user/advanced/#module-emcee">[1]</a>, <a href="../api/#module-emcee">[2]</a>, <a href="../user/pt/#module-emcee">[3]</a>
+  </dt>
+
+      
+  <dt><a href="../api/#module-emcee.interruptible_pool">emcee.interruptible_pool (module)</a>
   </dt>
 
   </dl></td>
@@ -233,10 +227,14 @@
   </dt>
 
       </dl></dd>
+      
+  <dt><a href="../api/#emcee.EnsembleSampler.flatlnprobability">flatlnprobability (emcee.EnsembleSampler attribute)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="../api/#emcee.EnsembleSampler.flatlnprobability">flatlnprobability (emcee.EnsembleSampler attribute)</a>
+  <dt><a href="../api/#emcee.autocorr.function">function() (in module emcee.autocorr)</a>
   </dt>
 
   </dl></td>
@@ -244,6 +242,22 @@
 
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../api/#emcee.EnsembleSampler.get_autocorr_time">get_autocorr_time() (emcee.EnsembleSampler method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="../api/#emcee.MHSampler.get_autocorr_time">(emcee.MHSampler method)</a>
+  </dt>
+
+        
+  <dt><a href="../api/#emcee.PTSampler.get_autocorr_time">(emcee.PTSampler method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="../api/#emcee.EnsembleSampler.get_lnprob">get_lnprob() (emcee.EnsembleSampler method)</a>
@@ -268,6 +282,16 @@
 
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="../api/#emcee.autocorr.integrated_time">integrated_time() (in module emcee.autocorr)</a>
+  </dt>
+
+      
+  <dt><a href="../api/#emcee.interruptible_pool.InterruptiblePool">InterruptiblePool (class in emcee.interruptible_pool)</a>
+  </dt>
+
+  </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="../api/#emcee.utils.MPIPool.is_master">is_master() (emcee.utils.MPIPool method)</a>
@@ -310,9 +334,15 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="../api/#emcee.utils.MPIPool.map">map() (emcee.utils.MPIPool method)</a>
+  <dt><a href="../api/#emcee.interruptible_pool.InterruptiblePool.map">map() (emcee.interruptible_pool.InterruptiblePool method)</a>
   </dt>
 
+      <dd><dl>
+        
+  <dt><a href="../api/#emcee.utils.MPIPool.map">(emcee.utils.MPIPool method)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="../api/#emcee.utils.MH_proposal_axisaligned">MH_proposal_axisaligned (class in emcee.utils)</a>
   </dt>

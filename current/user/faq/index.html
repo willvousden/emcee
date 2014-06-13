@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>FAQ &mdash; emcee 2.0.0 documentation</title>
+    <title>FAQ &mdash; emcee 2.1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/flasky.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0.0',
+        VERSION:     '2.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '',
         HAS_SOURCE:  true
@@ -24,17 +24,14 @@
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="emcee 2.0.0 documentation" href="../../" />
+    <link rel="top" title="emcee 2.1.0 documentation" href="../../" />
     <link rel="next" title="API" href="../../api/" />
     <link rel="prev" title="Parallel-Tempering Ensemble MCMC" href="../pt/" />
      
     
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
-    <script type="text/javascript" src="//use.typekit.com/phg8fgl.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <link href="http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700|Alegreya+SC:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700|Alegreya+SC:400,700|Buenard:400,700" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="../../_static/favicon.png">
 
 
@@ -55,7 +52,7 @@
         <li class="right" >
           <a href="../pt/" title="Parallel-Tempering Ensemble MCMC"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../">emcee 2.0.0 documentation</a> &raquo;</li> 
+        <li><a href="../../">emcee 2.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -101,10 +98,12 @@ the logarithm of 0 prior probability using:</p>
 </pre></div>
 </div>
 <p>Note: if your function is written in C++, use:</p>
-<div class="highlight-python"><pre>return -std::numeric_limits&lt;double&gt;::infinity();</pre>
+<div class="highlight-python"><div class="highlight"><pre>return -std::numeric_limits&lt;double&gt;::infinity();
+</pre></div>
 </div>
 <p>and avoid:</p>
-<div class="highlight-python"><pre>return -std::numeric_limits&lt;double&gt;::max();</pre>
+<div class="highlight-python"><div class="highlight"><pre>return -std::numeric_limits&lt;double&gt;::max();
+</pre></div>
 </div>
 <p>as it does not have the desired effect.</p>
 </div>

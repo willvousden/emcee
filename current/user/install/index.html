@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation &mdash; emcee 2.0.0 documentation</title>
+    <title>Installation &mdash; emcee 2.1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/flasky.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0.0',
+        VERSION:     '2.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '',
         HAS_SOURCE:  true
@@ -24,17 +24,14 @@
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="emcee 2.0.0 documentation" href="../../" />
+    <link rel="top" title="emcee 2.1.0 documentation" href="../../" />
     <link rel="next" title="Quickstart" href="../quickstart/" />
     <link rel="prev" title="emcee" href="../../" />
      
     
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
-    <script type="text/javascript" src="//use.typekit.com/phg8fgl.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <link href="http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700|Alegreya+SC:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700|Alegreya+SC:400,700|Buenard:400,700" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="../../_static/favicon.png">
 
 
@@ -55,7 +52,7 @@
         <li class="right" >
           <a href="../../" title="emcee"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../">emcee 2.0.0 documentation</a> &raquo;</li> 
+        <li><a href="../../">emcee 2.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -75,11 +72,13 @@ using <a class="reference external" href="http://www.pip-installer.org/">pip</a>
 <h2>Using pip<a class="headerlink" href="#using-pip" title="Permalink to this headline">¶</a></h2>
 <p>The easiest way to install the most recent stable version of <tt class="docutils literal"><span class="pre">emcee</span></tt> is
 with <a class="reference external" href="http://www.pip-installer.org/">pip</a>:</p>
-<div class="highlight-python"><pre>$ pip install emcee</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ pip install emcee
+</pre></div>
 </div>
 <p>You might need to run this using <tt class="docutils literal"><span class="pre">sudo</span></tt> depending on your Python
 installation. You can also use <tt class="docutils literal"><span class="pre">easy_install</span></tt>:</p>
-<div class="highlight-python"><pre>$ easy_install emcee</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ easy_install emcee
+</pre></div>
 </div>
 <p>but <tt class="docutils literal"><span class="pre">pip</span></tt> is probably better.</p>
 </div>
@@ -87,21 +86,25 @@ installation. You can also use <tt class="docutils literal"><span class="pre">ea
 <h2>From source<a class="headerlink" href="#from-source" title="Permalink to this headline">¶</a></h2>
 <p>Alternatively, you can get the source by downloading a
 <a class="reference external" href="https://github.com/dfm/emcee/tarball/master">tarball</a>:</p>
-<div class="highlight-python"><pre>$ curl -OL https://github.com/dfm/emcee/tarball/master</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ curl -OL https://github.com/dfm/emcee/tarball/master
+</pre></div>
 </div>
 <p>or <a class="reference external" href="https://github.com/dfm/emcee/zipball/master">zip archive</a>:</p>
-<div class="highlight-python"><pre>$ curl -OL https://github.com/dfm/emcee/zipball/master</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ curl -OL https://github.com/dfm/emcee/zipball/master
+</pre></div>
 </div>
 <p>Once you&#8217;ve downloaded and unpacked the source, you can navigate into the
 root source directory and run:</p>
-<div class="highlight-python"><pre>$ python setup.py install</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ python setup.py install
+</pre></div>
 </div>
 </div>
 <div class="section" id="bleeding-edge-development-version">
 <h2>Bleeding edge development version<a class="headerlink" href="#bleeding-edge-development-version" title="Permalink to this headline">¶</a></h2>
 <p><tt class="docutils literal"><span class="pre">emcee</span></tt> is being developed actively on <a class="reference external" href="https://github.com/dfm/emcee">GitHub</a> so if you feel like hacking, you can clone
 the source repository</p>
-<div class="highlight-python"><pre>git clone https://github.com/dfm/emcee.git</pre>
+<div class="highlight-python"><div class="highlight"><pre>git clone https://github.com/dfm/emcee.git
+</pre></div>
 </div>
 <p>or <a class="reference external" href="https://github.com/dfm/emcee">fork the repository</a>.</p>
 </div>
@@ -109,7 +112,8 @@ the source repository</p>
 <h2>Test the installation<a class="headerlink" href="#test-the-installation" title="Permalink to this headline">¶</a></h2>
 <p>To make sure that the installation went alright, you can run some unit tests
 by running:</p>
-<div class="highlight-python"><pre>python -c 'import emcee; emcee.test()'</pre>
+<div class="highlight-python"><div class="highlight"><pre>python -c &#39;import emcee; emcee.test()&#39;
+</pre></div>
 </div>
 <p>or, if you have <a class="reference external" href="http://nose.readthedocs.org/">nose</a>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">nosetests</span>

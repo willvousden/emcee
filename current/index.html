@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>emcee &mdash; emcee 2.0.0 documentation</title>
+    <title>emcee &mdash; emcee 2.1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/flasky.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '2.0.0',
+        VERSION:     '2.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '',
         HAS_SOURCE:  true
@@ -24,16 +24,13 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="emcee 2.0.0 documentation" href="#" />
+    <link rel="top" title="emcee 2.1.0 documentation" href="#" />
     <link rel="next" title="Installation" href="user/install/" />
      
     
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
-    <script type="text/javascript" src="//use.typekit.com/phg8fgl.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <link href="http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700|Alegreya+SC:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700|Alegreya+SC:400,700|Buenard:400,700" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="_static/favicon.png">
 
 
@@ -51,7 +48,7 @@
         <li class="right" >
           <a href="user/install/" title="Installation"
              accesskey="N">next</a> |</li>
-        <li><a href="#">emcee 2.0.0 documentation</a> &raquo;</li> 
+        <li><a href="#">emcee 2.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -69,7 +66,7 @@
 show you how to use it.</p>
 <p>This documentation won&#8217;t teach you too much about MCMC but there are a lot
 of resources available for that (try <a class="reference external" href="http://www.inference.phy.cam.ac.uk/mackay/itila/book.html">this one</a>).
-We also <a class="reference external" href="http://arxiv.org/abs/1202.3665">publlished a paper</a> explaining
+We also <a class="reference external" href="http://arxiv.org/abs/1202.3665">published a paper</a> explaining
 the <tt class="docutils literal"><span class="pre">emcee</span></tt> algorithm and implementation in detail.</p>
 <p>emcee has been used in <a class="reference external" href="testimonials">quite a few projects in the astrophysical literature</a> and it is being actively developed on <a class="reference external" href="https://github.com/dfm/emcee">GitHub</a>.</p>
 </div>
@@ -120,6 +117,7 @@ something like:</p>
 <li class="toctree-l2"><a class="reference internal" href="user/advanced/#multiprocessing">Multiprocessing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user/advanced/#arbitrary-metadata-blobs">Arbitrary metadata blobs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user/advanced/#using-mpi-to-distribute-the-computations">Using MPI to distribute the computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#loadbalancing-in-parallel-runs">Loadbalancing in parallel runs</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="user/pt/">Parallel-Tempering Ensemble MCMC</a><ul>
@@ -147,7 +145,9 @@ something like:</p>
 <li class="toctree-l2"><a class="reference internal" href="api/#the-parallel-tempered-ensemble-sampler">The Parallel-Tempered Ensemble Sampler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/#standard-metropolis-hastings-sampler">Standard Metropolis-Hastings Sampler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/#abstract-sampler-object">Abstract Sampler Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#autocorrelation-analysis">Autocorrelation Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#pools">Pools</a></li>
 </ul>
 </li>
 </ul>
@@ -162,23 +162,29 @@ something like:</p>
 <p>Direct contributions to the code base:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/RuthAngus">Ruth Angus (Oxford)</a></li>
+<li><a class="reference external" href="https://github.com/bencebeky">Bence Béky (Harvard)</a></li>
 <li><a class="reference external" href="https://github.com/fredRos">Frederik Beaujean (MPI for Physics)</a></li>
 <li><a class="reference external" href="https://github.com/aconley">Alex Conley (U Colorado, Boulder)</a></li>
 <li><a class="reference external" href="https://github.com/farr">Will Meierjurgen Farr (Northwestern)</a></li>
-<li><a class="reference external" href="https://github.com/demitri">Demitri Muna (OSU)</a></li>
+<li><a class="reference external" href="https://github.com/juliohm">Júlio Hoffimann Mendes (Federal University of Pernambuco)</a></li>
 <li><a class="reference external" href="https://github.com/davidwhogg">David W. Hogg (NYU)</a></li>
 <li><a class="reference external" href="https://github.com/dstndstn">Dustin Lang (Princeton/CMU)</a></li>
 <li><a class="reference external" href="https://github.com/drphilmarshall">Phil Marshall (Oxford)</a></li>
+<li><a class="reference external" href="https://github.com/demitri">Demitri Muna (OSU)</a></li>
 <li><a class="reference external" href="https://github.com/adrn">Adrian Price-Whelan (Columbia)</a></li>
 <li><a class="reference external" href="https://github.com/jeremysanders">Jeremy Sanders (Cambridge)</a></li>
 <li><a class="reference external" href="https://github.com/lpsinger">Leo Singer (Caltech)</a></li>
-<li><a class="reference external" href="mindriot101">Simon Walker</a></li>
+<li><a class="reference external" href="https://bitbucket.org/manodeep/">Manodeep Sinha (Vanderbilt)</a></li>
+<li><a class="reference external" href="https://github.com/mtazzari">Marco Tazzari (ESO)</a></li>
+<li><a class="reference external" href="https://github.com/mindriot101">Simon Walker</a></li>
+<li><a class="reference external" href="https://github.com/pkgw">Peter K. G. Williams (CfA)</a></li>
 <li><a class="reference external" href="https://github.com/joezuntz">Joe Zuntz (Oxford)</a></li>
 </ul>
 <p>Comments, corrections &amp; suggestions:</p>
 <ul class="simple">
 <li>Eric Agol (UWash)</li>
 <li>Jo Bovy (IAS)</li>
+<li>Andrew Bradshaw (UC Davis)</li>
 <li>Jacqueline Chen (MIT)</li>
 <li>John Gizis (Delaware)</li>
 <li>Jonathan Goodman (NYU)</li>
@@ -198,6 +204,16 @@ and consider adding your paper to the <a class="reference internal" href="testim
 </div>
 <div class="section" id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="upcoming">
+<h3>2.1.0 (upcoming)<a class="headerlink" href="#upcoming" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Removing dependence on <tt class="docutils literal"><span class="pre">acor</span></tt> extension.</li>
+<li>Added arguments to <tt class="docutils literal"><span class="pre">PTSampler</span></tt> function.</li>
+<li>Added automatic load-balancing for MPI runs.</li>
+<li>Added custom load-balancing for MPI and multiprocessing.</li>
+<li>New default multiprocessing pool that supports <tt class="docutils literal"><span class="pre">^C</span></tt>.</li>
+</ul>
+</div>
 <div class="section" id="id1">
 <h3>2.0.0 (2013-11-17)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
